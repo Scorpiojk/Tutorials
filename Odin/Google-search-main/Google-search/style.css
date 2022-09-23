@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    height: 5vh;
+    cursor: pointer;
+    width: 100%;
+    color: gray;
+}
+
+nav li{
+    padding-top: 10px;
+    width: 3%;
+}
+
+.apps{
+    height: 35px;
+    width: 35px;
+    border: none;
+    border-radius: 50%;
+    /*This image contains several google fonts, you just have to determine which part of the image to use*/
+    background-image: url('https://ssl.gstatic.com/gb/images/i1_1967ca6a.png');
+    background-color: white;
+    background-position: -129px -35px;
+    cursor: pointer;
+}
+.apps:hover{background-color: rgb(214, 214, 214); transition: 0.2s;}
+
+.profile{
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+}
+
+
+/*-------------------------------------------------------*/
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    min-height: 300px;
+    margin-top: 50px;
+}
+
+.logo{
+    margin-bottom: 20px;
+}
+
+.search-bar{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border: 1px rgb(224, 224, 224) solid;
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+.search-bar:active{box-shadow: .2px .2px 1px 1px rgb(224, 224, 224);}
+input:focus{outline: transparent;}
+
+.search{
+    height: 15px;
+    width: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(search-icon-png-9982.png);
+    background-size: cover;
+}
+
+.text{
+    width: 500px;
+    border: none;
+    margin: 5px 10px;
+}
+
+.audio{
+    height: 20px;
+    width: 14px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(ClipartKey_272205.png);
+    background-size: cover;
+}
+
+/*-----------------------------------------------------------------------*/
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.buttons *{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgb(71, 71, 71);
+    background-color: rgb(243, 243, 243);
+}
+.buttons *:hover{box-shadow: 0px 0px 1.2px .5px rgb(185, 185, 185) ;}
+
+/*--------------------------------------------*/
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    background-color: rgb(238, 238, 238);
+    border-top: rgb(197, 197, 197) 1px solid;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer div{
+    display: flex;
+    flex-direction: row;
+}
+
+footer div *{
+    padding: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(122, 122, 122);
+    font-size: 14px;
+}
