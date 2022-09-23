@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="pad">
+        <div class="nav">
+            <div class="selectColor">
+                <input  id="colorPick" type="color" value="#333333">
+                <button id="color">Color pen</button>
+            </div>
+            
+            <button id="rainbow">Rainbow</button>
+
+            <button id="erase" onclick="eraser()">Eraser</button>
+            
+            <input type="range" id="rangeGrids" name="points" min="1" max="100">
+            <div id="valueGrids">16 x 16</div>
+
+            <button id="clear">Clear Grid</button>
+
+            <button id="shadow">Shadow</button>
+
+            <button id="toogleBorders" onclick="toogleBorders()">Toogle Borders</button>
+            
+        </div>
+        <div id="container" class="container"> </div>
+    </div>
+
+    <footer><a href="https://github.com/Scorpiojk">@Scorpiojk</a>
+    <p>This work is a part of <a href="https://www.theodinproject.com/paths/foundations/courses/foundations">The Odin Proyect Curriculum</a></p></footer>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+Protoype 
+
+---------> prototype property: primarly use for inheritance
+
+---------> prototype attribute: a characteristic of the object, points to the partent
+
+two general ways an object’s prototype attribute is set when an object is created:
+
+1 If an object is created with an object literal (var newObj = {}), it inherits properties from Object.prototype and we say its prototype object (or prototype attribute) is Object.prototype.
+
+2 If an object is created from a constructor function such as new Object (), new Fruit () or new Array () or new Anything (), it inherits from that constructor (Object (), Fruit (), Array (), or Anything ()).
+
+
+Why is Prototype Important and When is it Used?
+
+----all inheritance in JavaScript is made possible through the prototype property.
+
+----All objects in JavaScript inherit properties and methods from Object.prototype.
+
+
+------------------------------------------------------------------
+__proto__ is a historical getter/setter(captador/receptor) for [[Prototype]]
+
+The __proto__ property is a bit outdated. It exists for historical reasons, modern JavaScript suggests that we should use Object.getPrototypeOf/Object.setPrototypeOf functions instead that get/set the prototype. 
+------------------------------------------------------------------
+
+this is not affected by prototypes at all.-----> this is always the object before the dot.
+
+let user = {			let admin = {
+  name: "John",			  __proto__: user,
+  surname: "Smith",		  isAdmin: true
+
+So, the setter call admin.fullName= uses admin as this, not user.
+
+
+------------------------------------------------------------------
+Object.create
+
+-----> Extend classess
+
+-----> static method that creates a new object with the prototype set to a certain object
+
+function (prototype) {
+	const object = {}
+	Object.setPrototypeOf (object, prototype)
+	return object
+}
+
+------------------------------------------------------------------- 

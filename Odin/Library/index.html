@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fdbf4efde1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <div id="container">
+        <h1 class="title"><i class="fas fa-book-open"></i>Library</h1>
+        <button id="open_modal" class="open-modal">New book <i class="fa-thin fa-plus"></i></button>
+
+        <div class="modal_container" id="myModal">
+            <div class="modal">
+                <form id="book-form">
+                    
+                    <i class="close">X</i>
+
+                    <p><label for="name">Book name: 
+                        <input 
+                        type="text" 
+                        id="name" 
+                        placeholder="Name"
+                        pattern="[a-zA-Z'-'\s]*" 
+                        required
+                        >
+                    </label></p>
+
+                    <p><label for="author">Author: 
+                        <input 
+                        type="text" 
+                        id="author" 
+                        placeholder="Author" 
+                        pattern="[a-zA-Z'-'\s]*"
+                        required
+                        >
+                    </label for="pages"></p>
+
+                    <p><label>Pages: 
+                        <input 
+                        type="number" 
+                        name="pages" 
+                        id="pages" 
+                        placeholder="Number" 
+                        required
+                        >
+                    </label for="read"></p>
+
+                    <div class="is-read">
+                        <label for="is-read">Have you read it?</label>
+                        <input 
+                            class="checkbox" 
+                            type="checkbox" 
+                            id="isRead"
+                            value="false"
+                        />
+                    </div>
+                
+                    <p><input 
+                        type="submit" 
+                        value="addBook" 
+                        id="submit_form">
+                    </p>
+
+                </form>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                    <th></th>
+                </tr>
+            </thead>
+            
+            <tbody id="books"></tbody>
+
+        </table>
+    </div>
+    <script src="App.js"></script>
+</body>
+</html>
